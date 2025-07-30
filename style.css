@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Cabeçalho */
+header {
+    padding: 15px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #000000;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover {
+    color: #414141;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+h1 {
+    color: #000000;
+}
+
+h2.titulo {
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 13px;
+    font-weight: 500;
+    background: transparent;
+    color: #000000;
+    text-transform: uppercase;
+    border-radius: 25px;
+    border: 2.5px solid black;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.btn-contato button:hover {
+    box-shadow: 0px 0px 8px #808080;
+    transform: scale(1.05);
+}
+
+section.topo-do-site {
+    padding: 10px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.topo-do-site .txt-topo-site h1 {
+    font-size: 34px;
+    line-height: 40px;
+}
+
+.topo-do-site p {
+    margin: 20px 0;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 10px;
+    }
+}
+
+/* Estilo da imagem com proporção corrigida */
+.foto-responsiva {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Especialidades */
+section.especialidades {
+    padding: 50px 4%;
+}
+
+.especialidades .especialidades-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 25px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #ffffff;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(29, 29, 29, 0.616);
+}
+
+.especialidades .especialidades-box img {
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.especialidades .especialidades-box h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.especialidades .especialidades-box p {
+    text-align: justify;
+    font-size: 14px;
+}
+
+/* Projetos */
+section.meus-projetos {
+    padding: 50px 4%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 1280px;
+    margin: 40px auto;
+}
+
+.meus-projetos h2.titulo {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #222;
+    font-weight: 700;
+}
+
+.meus-projetos .flex {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.meus-projetos video,
+.meus-projetos iframe {
+    width: 360px;
+    height: 210px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.meus-projetos video:hover,
+.meus-projetos iframe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .topo-do-site .txt-topo-site h1 {
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    header nav li {
+        padding: 0 20px;
+    }
+
+    .btn-contato button {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    header > .interface {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .txt-topo-site,
+    .img-topo-site {
+        width: 100%;
+    }
+
+    .img-topo-site img {
+        max-width: 90%;
+    }
+
+    .especialidades .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meus-projetos .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meus-projetos video,
+    .meus-projetos iframe {
+        width: 100%;
+        max-width: 95%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .topo-do-site .txt-topo-site h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .btn-contato button {
+        width: 100%;
+    }
+
+    header nav li {
+        padding: 10px 0;
+    }
+
+    .especialidades .especialidades-box {
+        padding: 20px;
+    }
+}
